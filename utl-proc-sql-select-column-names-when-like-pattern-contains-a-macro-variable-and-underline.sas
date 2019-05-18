@@ -1,5 +1,7 @@
 Proc sql select column names when like pattern contains a macro variable and underline
 
+Example: like "&prefix^_%" escape '^'
+
 The '_' is a pattern matching character so we need to escape it.
 We have to use double quotes so the macro variable is resolved.
 
@@ -82,5 +84,4 @@ proc sql;
   where
      upcase(colName) like "&prefix^_%" escape '^'
 ;quit;
-
 
